@@ -2,6 +2,11 @@ body, html {
     height: 100%
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 body, h1, h2, h3 h4, h5, h6 {
     font-family: 'Alumni Sans', sans-serif;
 }
@@ -25,6 +30,15 @@ body, h1, h2, h3 h4, h5, h6 {
     color: black;
 }
 
+button.navbar-toggle {
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    display: none;
+    font-weight: bold
+}
+
 /*CUSTOM STYLES FOR HEADER*/
 .bg-img{
     background-image: url('assets/ivan-torres-MQUqbmszGGM-unsplash.jpg');
@@ -37,7 +51,7 @@ body, h1, h2, h3 h4, h5, h6 {
     min-width: 250px;
 }
 
-.btn.hover-btn:hove {
+.btn.hover-btn:hover {
     background-color: lightgrey;
     color: black;
     text-decoration: underline;
@@ -66,7 +80,7 @@ body, h1, h2, h3 h4, h5, h6 {
     padding: .6em .8em;
 }
 
-.smal-tag {
+.small-tag {
     padding: .3em .3em;
 }
 
@@ -94,9 +108,40 @@ body, h1, h2, h3 h4, h5, h6 {
     font-size: 1.8rem;
 }
 
-/*hide on small screens */
-@media (max-width: 992px) {
-    #myNavBar {
-        display: none;
-    }
+/* Custom styles for about */
+hr {
+    color: #fff;
+    height: 15px;
 }
+
+
+
+/***************  MEDIA QUERIES ***********************/
+@media (max-width: 992px) {
+    .chef-img-container {
+        justify-content: center;
+    }
+ }
+
+ @media (max-width: 767px) {
+    button.navbar-toggle {
+        display: block;
+    }
+
+    ul li {
+        text-align: center;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chef-img-container {
+        justify-content: center;
+    }
+
+    #menu a {
+        width: 150px
+    }
+ }
